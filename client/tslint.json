@@ -1,0 +1,47 @@
+{
+  "extends": [
+    // "tslint:recommended",
+    "tslint-eslint-rules",
+    "tslint-react"
+    // "tslint-config-prettier"
+  ],
+  // "extends": [],
+  "defaultSeverity": "warning",
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js"
+    ]
+  },
+  "jsRules": {
+    "object-literal-sort-keys": false //Disable for javascript
+  },
+  // "plugins": ["react", "prettier"],
+  "plugins": ["react-hooks"],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "interface-over-type-literal": false,
+    "no-console": false,
+    "object-literal-sort-keys": false, //命名顺序
+    "jsx-boolean-value": false, //强制使用布尔属性表示法
+    "no-shadowed-variable": [
+      //阴影变量
+      true,
+      {
+        "temporalDeadZone": false //作用域内不警告
+      }
+    ],
+    // "jsx-wrap-multiline": false,
+    "jsx-curly-spacing": [2, { "when": "never" }],
+    "jsx-no-multiline-js": false, //jsx表达式
+    "jsx-no-lambda": false, //react render中是否可使用函数的语法
+    "ordered-imports": false, //导入变量字母顺序
+    "comment-format": false, //注释是否必须从一个空格开始
+    "only-arrow-functions": false, //必须使用箭头函数
+    "max-classes-per-file": false, //文件类个数
+    "member-access": false, //私有化
+    "interface-name": false, //接口命名
+    "prefer-const": false //const 常量
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "restartable": "rs",
+  "verbose": false,
+  "env": {
+    "NODE_ENV": "development",
+    "PORT": "9999"
+  },
+  "execMap": {},
+  "watch": ["app/", "bin/", "routes/", "views/", "scripts/", "app.js"],
+  "ignore": [".git", ".idea", "node_modules"],
+  "ext": "js pug"
+}

@@ -1,0 +1,55 @@
+@import '../common/mixin';
+
+.inbox_drawer_wrapper {
+  :global {
+    .ant-drawer-body {
+      height: 100%;
+      overflow-x: hidden;
+    }
+    .ant-layout-sider {
+      max-height: 100%;
+    }
+  }
+}
+
+.inbox_drawer_dark {
+  :global {
+    .ant-drawer-header {
+      background-color: $dark-color;
+    }
+    .ant-drawer-close {
+      color: #ffffffa6;
+    }
+  }
+}
+
+.inbox_content_wraper {
+  :global {
+    .ant-table {
+      .ant-checkbox-inner {
+        border-color: $dark-gray;
+      }
+    }
+    .ant-checkbox-checked {
+      .ant-checkbox-inner {
+        border-color: $theme-color;
+      }
+    }
+    .inbox-operate-icon {
+      margin-right: 15px;
+    }
+    .selected-inbox-row {
+      background-color: #c9e4ff;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .inbox_content_wraper {
+    :global {
+      .inbox-operate-icon {
+        margin-right: 7px;
+      }
+    }
+  }
+}

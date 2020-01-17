@@ -1,0 +1,30 @@
+.drag_grid_wrapper {
+  :global {
+    .ant-card {
+      background: inherit;
+    }
+    .ant-card-head {
+      background: #fff;
+    }
+  }
+}
+
+.drag_list_wrapper {
+  min-height: 45px;
+  :global {
+    .ant-list-split .ant-list-item {
+      border-bottom: none;
+    }
+    .ant-list-item {
+      padding: 0;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      > div {
+        width: 100%;
+        padding: 12px;
+        background-color: #f5f5f5;
+      }
+    }
+  }
+}

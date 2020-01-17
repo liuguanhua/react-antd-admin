@@ -1,0 +1,14 @@
+@import 'mixin';
+#nprogress .bar {
+  background: $theme-color;
+  height: 5px;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px $theme-color, 0 0 5px $theme-color;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: $theme-color;
+  border-left-color: $theme-color;
+}

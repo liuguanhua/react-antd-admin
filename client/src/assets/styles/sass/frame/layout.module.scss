@@ -1,0 +1,68 @@
+@import '../common/mixin';
+
+.sider_logo {
+  height: 100px;
+  span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-transform: capitalize;
+    background-image: radial-gradient(
+      ellipse at center,
+      #1890ff 0%,
+      #36cbcb 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    :local {
+      animation: fadeLeftIn 0.05s linear;
+      animation-fill-mode: both;
+    }
+  }
+}
+
+.switch_theme {
+  height: 50px;
+  @include border(top);
+  padding: 0 15px;
+  transition: all 0.5s;
+  span {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  :global {
+    .anticon {
+      margin-right: 5px;
+    }
+  }
+}
+
+// .dark {
+//   .switch_theme {
+//     background: $dark-color;
+//     border-color: $dark-color;
+//     color: #b8bec3;
+//   }
+//   .sider_logo span {
+//     color: $default-gray;
+//   }
+// }
+
+// .light {
+//   background: #fff;
+//   .switch_theme {
+//     background: #fff;
+//   }
+// }
+
+@keyframes fadeLeftIn {
+  0% {
+    transform: translateX(5px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,42 @@
+.ant-design-draggable-modal {
+  /* pointer-events: none; */
+  overflow: hidden !important;
+}
+
+.ant-design-draggable-modal .ant-modal {
+  display: flex;
+  max-width: none;
+  transform-origin: 50% 50% !important;
+}
+
+.ant-design-draggable-modal .ant-modal-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.ant-design-draggable-modal .ant-modal-header {
+  flex: 0;
+  padding: 0;
+}
+
+.ant-design-draggable-modal .ant-modal-footer {
+  flex: 0;
+  padding: 16px;
+}
+
+.ant-design-draggable-modal .ant-design-draggable-modal-title {
+  cursor: move;
+  padding: 16px;
+}
+
+.ant-design-draggable-modal .ant-design-draggable-modal-title::before {
+  content: '\00a0';
+}
+
+.ant-design-draggable-modal .ant-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}

@@ -1,0 +1,95 @@
+@import './node_modules/compass-sass-mixins/lib/compass';
+// 颜色
+$theme-color: #1890ff;
+$theme-bright: #bde2ff;
+$theme-light: #e6f7ff;
+$default-gray: #d9d9d9;
+$dark-color: #001629;
+$light-gray: lighten(
+  $color: $default-gray,
+  $amount: 10%
+);
+$dark-gray: darken(
+  $color: $default-gray,
+  $amount: 40%
+);
+$highlight-color: #f5222d;
+
+// 字体大小
+$size-xxl: 24px;
+$size-xl: 20px;
+$size-lg: 18px;
+$size-md: 16px;
+$size-sm: 15px;
+$size-xs: 14px;
+$size-xxs: 12px;
+$size-type: (
+  xxl: $size-xxl,
+  xl: $size-xl,
+  lg: $size-lg,
+  md: $size-md,
+  sm: $size-sm,
+  xs: $size-xs,
+  xxs: $size-xxs
+);
+
+// 间距
+$default-space: 10px;
+$container-padding-md: 24px;
+$container-padding-sm: 16px;
+
+// mixin
+@mixin boxwh($width: 100%, $height: 100%) {
+  width: $width;
+  height: $height;
+}
+
+@mixin equalwh($num: 100%) {
+  @if unitless($num) {
+    $num: #{$num}px;
+  }
+  @include boxwh($num, $num);
+}
+
+@mixin boxcenter($num: 100%) {
+  width: #{$num};
+  margin: 0 auto;
+}
+
+@mixin padding($dir, $num: $default-space, $inner: padding) {
+  @if $dir {
+    #{$inner}-#{$dir}: $num;
+  } @else {
+    #{$inner}: $num;
+  }
+}
+
+@mixin margin($dir, $num: $default-space) {
+  @include padding($dir, $num, $inner: margin);
+}
+
+@mixin border($dir, $color: $default-gray, $num: 1) {
+  @if $dir {
+    border-#{$dir}: #{$num}px solid $color;
+  } @else {
+    border: #{$num}px solid $color;
+  }
+}
+
+@mixin zindex($num: 1) {
+  .z#{$num} {
+    z-index: $num;
+  }
+}
+
+@mixin bgphoto($color: transparent, $size: cover) {
+  background-color: $color;
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: center 0;
+}
+
+//ref:https://css-tricks.com/snippets/sass/advanced-type-checking/
+@function is-number($value) {
+  @return type-of($value) == 'number';
+}

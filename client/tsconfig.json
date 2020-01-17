@@ -1,0 +1,46 @@
+{
+  "extends": "./tsconfig.custom.json",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "outDir": "build/dist,src",
+    "module": "esnext",
+    "target": "esnext",
+    "lib": [
+      "es7",
+      "dom",
+      "esnext",
+      "dom.iterable",
+      "es2016",
+      "es2018.promise"
+    ],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": false,
+    "noImplicitAny": false,
+    "strict": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "watch": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "isolatedModules": true,
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "config",
+    "build",
+    "jest"
+  ]
+}

@@ -1,0 +1,156 @@
+@import '../common/mixin';
+
+$light: 'light';
+$dark: 'dark';
+$purple: 'purple';
+$orange: 'orange';
+$pink: 'pink';
+$light-color: #fff;
+$purple-color: #639;
+$orange-color: #e0541d;
+$pink-color: #ce204f;
+
+$theme-type: (
+  $light $light-color,
+  $dark $dark-color,
+  $purple $purple-color,
+  $orange $orange-color,
+  $pink $pink-color
+);
+:export {
+  themeType: $theme-type;
+}
+
+@mixin anticon($fontColor) {
+  :global {
+    .anticon {
+      color: $fontColor;
+    }
+  }
+}
+
+@each $key, $bgColor, $fontColor in $theme-type {
+  $isLight: $key==$light;
+  $fontColor: if($isLight, rgba(0, 0, 0, 0.65), rgba(255, 255, 255, 0.65));
+  .theme_color_#{$key} {
+    color: $fontColor;
+    @include anticon($fontColor);
+  }
+  .theme_bgcolor_#{$key} {
+    background-color: $bgColor;
+    @include anticon($fontColor);
+  }
+  .theme_drawer_#{$key} {
+    :global {
+      .ant-drawer-content {
+        background-color: $bgColor;
+      }
+      .ant-drawer-header {
+        background-color: inherit;
+      }
+    }
+    @include anticon($fontColor);
+  }
+  .theme_sider_#{$key} {
+    > div {
+      background: $bgColor;
+      .switch_theme {
+        background: $bgColor;
+        border-color: $bgColor;
+      }
+    }
+  }
+  .theme_menu_#{$key} {
+    :global {
+      .ant-menu,
+      .ant-menu-submenu > .ant-menu {
+        background: $bgColor;
+        color: $fontColor;
+      }
+      .ant-menu-inline,
+      .ant-menu-vertical,
+      .ant-menu-vertical-left {
+        border-right: 1px solid $bgColor;
+      }
+      .ant-menu-submenu-selected {
+        color: inherit;
+      }
+      .ant-menu-submenu-title .ant-menu-submenu-arrow {
+        &::before,
+        &::after {
+          background: $fontColor;
+        }
+      }
+      @if not $isLight {
+        .ant-menu-item > a {
+          color: $fontColor;
+        }
+        .ant-menu-item:active,
+        .ant-menu-submenu-title:active {
+          background-color: $theme-color;
+          color: $light-color;
+        }
+        .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+          background-color: $theme-color;
+          color: $light-color;
+          a {
+            color: $light-color;
+          }
+          &:hover {
+            color: $light-color;
+            opacity: 0.8;
+          }
+        }
+        .ant-menu-item-group-title {
+          color: $fontColor;
+        }
+        .ant-menu-light .ant-badge {
+          color: $fontColor;
+        }
+      }
+    }
+  }
+
+  .popover_menu_#{$key} {
+    :global {
+      .ant-popover-content > .ant-popover-arrow {
+        border-top-color: $bgColor;
+        border-left-color: $bgColor;
+      }
+    }
+  }
+}
+
+.theme_list {
+  li {
+    position: relative;
+    @include equalwh(30);
+    border-radius: 50%;
+    cursor: pointer;
+    // &:not(:last-child) {
+    //   margin-right: 10px;
+    // }
+    :global {
+      i {
+        display: none;
+      }
+    }
+  }
+  :global {
+    .active {
+      border: 2px solid $theme-color;
+      i {
+        display: block;
+      }
+    }
+    .theme-check {
+      position: absolute;
+      top: 6px;
+      right: 0;
+      left: 0;
+      margin: auto;
+      color: $theme-color;
+      font-weight: 900;
+    }
+  }
+}

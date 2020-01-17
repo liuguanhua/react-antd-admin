@@ -1,0 +1,62 @@
+@import '../common/mixin';
+$height-num: 55px;
+
+.header {
+  width: 100%;
+  padding: 0;
+  height: $height-num;
+  line-height: $height-num;
+  box-shadow: 0 0 10px $default-gray;
+  > div {
+    padding: 0 20px;
+  }
+  .switch_menu {
+    &:hover {
+      color: $theme-color;
+    }
+  }
+  .btn_like {
+    width: $height-num;
+    // &:hover {
+    //   color: $theme-color;
+    //   background-color: #e6f7ff;
+    // }
+  }
+
+  :global {
+    .avatar {
+      @include equalwh(40);
+    }
+    .ant-menu-submenu:hover {
+      color: $theme-color;
+      background-color: #e6f7ff;
+    }
+    .ant-menu-submenu .ant-menu-submenu-title {
+      height: $height-num;
+    }
+    .ant-menu {
+      border-bottom: none;
+    }
+    .ant-menu-submenu,
+    .ant-menu-item-active,
+    .ant-menu-submenu:hover {
+      border-bottom: none;
+    }
+    .header-icon-operate {
+      // padding: 0 15px
+    }
+  }
+}
+
+.header_dark {
+  background: $dark-color;
+}
+
+.popover_menu {
+  width: 250px;
+  :global {
+    .ant-popover-inner-content {
+      padding: 0;
+    }
+  }
+}
