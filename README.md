@@ -20,21 +20,21 @@
 
 ## 📖 介绍
 
-基于工作中开发需要，设计了一个后台前端管理系统，节省从零开始搭建的时间，前端基于[react](https://github.com/facebook/react)（拥抱 hooks）、[typescript](https://github.com/microsoft/TypeScript)、[antd](https://github.com/ant-design/ant-design)、[dva](https://github.com/dvajs/dva)及其一些特别优秀的开源库实现，特别感谢。
+基于工作中开发需要，设计了一个后台前端管理系统，节省从零开始搭建的时间，前端基于[react](https://github.com/facebook/react)（拥抱 hooks）、[typescript](https://github.com/microsoft/TypeScript)、[antd](https://github.com/ant-design/ant-design)、[dva](https://github.com/dvajs/dva)及一些特别优秀的开源库实现，特别感谢。
 
 使用[node](https://nodejs.org/zh-cn)、[mockjs](https://github.com/nuysoft/Mock)模拟了一层数据服务，部署在[now.sh](https://zeit.co)平台上。
 
 ## 🏠 主页
 
-[预览地址一](https://liuguanhua.github.io/react-antd-admin/)
+[预览地址一](https://liuguanhua.github.io/react-antd-admin/)（推荐）
 
-[预览地址二](https://react-antd-admin.lhh.now.sh/)
+[预览地址二](https://react-antd-admin.lhh.now.sh/)（访问有点慢）
 
 ![demo](https://s2.ax1x.com/2020/01/14/lL9rJU.png)
 
 ![demo](https://s2.ax1x.com/2020/01/16/lvekAU.gif)
 
-![二维码](https://s2.ax1x.com/2020/01/14/lLSd6s.png)
+![二维码](https://s2.ax1x.com/2020/01/17/1SaMJe.png)
 
 ## 📁 目录
 
@@ -69,7 +69,7 @@ react-antd-admin
 
 > - **页面**
 
-    - 登录、登出
+    - 登录、注册
     - 首页数据统计展示
     - 信息中心（邮件功能的一部分效果）
     - 订单统计，地图展示各省市订单量
@@ -121,8 +121,8 @@ server端
 ## 👤 作者
 
 - 个人主页: [liuguanhua.github.io](https://liuguanhua.github.io)
-- Github:[@liguanhua](https://github.com/liguanhua)
+- Github:[@liuguanhua](https://github.com/liguanhua)
 
 ## 🤝 支持
 
-有什么好的想法、建议、问题和功能需求，欢迎 👋 提出。如果觉得这个项目不错或者对您有帮助，👏 赞一  个️⭐️❤️！
+有什么好的想法、建议、问题和功能需求，欢迎 👋 提出。如果觉得这个项目不错或者对您有帮助，👏 赞一 个 ⭐️❤️！
