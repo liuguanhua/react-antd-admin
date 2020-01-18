@@ -8,7 +8,7 @@
     <img alt="React Version" src="https://img.shields.io/badge/react-16.8.6-brightgreen" />
   </a>
    <a href="https://github.com/microsoft/TypeScript" target="_blank">
-    <img alt="React Version" src="https://img.shields.io/badge/typescript-3.7.2-brightgreen" />
+    <img alt="TypeScript Version" src="https://img.shields.io/badge/typescript-3.7.2-brightgreen" />
   </a>
  <a href="https://github.com/ant-design/ant-design" target="_blank">
     <img alt="Antd Version" src="https://img.shields.io/badge/antd-3.25.1-brightgreen" />
@@ -26,15 +26,15 @@
 
 ## 🏠 主页
 
-[预览地址一](https://liuguanhua.github.io/react-antd-admin/)（推荐）
+<!-- [预览地址一](https://liuguanhua.github.io/react-antd-admin/)（推荐） -->
 
-[预览地址二](https://react-antd-admin.lhh.now.sh/)（访问有点慢）
+[预览](https://react-antd-admin.lhh.now.sh/)
 
 ![demo](https://s2.ax1x.com/2020/01/14/lL9rJU.png)
 
 ![demo](https://s2.ax1x.com/2020/01/16/lvekAU.gif)
 
-![二维码](https://s2.ax1x.com/2020/01/17/1SaMJe.png)
+![二维码](https://s2.ax1x.com/2020/01/14/lLSd6s.png)
 
 ## 📁 目录
 
