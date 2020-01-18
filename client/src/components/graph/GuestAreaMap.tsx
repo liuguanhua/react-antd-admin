@@ -9,7 +9,8 @@ import { ICardChildProps } from '@scripts/types'
 import { fetchGeoWorld } from '@scripts/servers'
 
 import globalMapData from '@store/mock/globalMapData.json'
-import { CoverWaitContent, BegetReactPlaceholder } from '@components/common'
+import { CoverWaitContent } from '@components/common'
+import { SkeletonGuestAreaMap } from '@components/skeleton'
 import { useFetchStage } from '@components/hooks'
 
 HC_map(Highcharts)
@@ -266,17 +267,6 @@ const getOptions = (data: TSetKeyStringProps) => {
       }
     ]
   }
-}
-
-const SkeletonGuestAreaMap = () => {
-  return (
-    <BegetReactPlaceholder
-      type="rect"
-      style={{
-        height: 416
-      }}
-    />
-  )
 }
 
 const GuestAreaMap: React.FC<ICardChildProps> = ({ title }) => {

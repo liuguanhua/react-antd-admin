@@ -23,6 +23,7 @@
     logo: publicPath + 'static/logo.svg',
     apiRoot: 'http://localhost:9999/',
     // apiRoot: 'http://apidemo.lhh.now.sh:9999/',
+    // apiRoot: 'http://lgh.github.io:9999/',
     // apiRoot: 'https://api.lhh.now.sh/',
     themes,
     defaultTheme: 'purple',

@@ -5,18 +5,17 @@ import { CardTabListType } from 'antd/lib/card'
 import styles from '@styles/sass/page/home.module.scss'
 
 import { getSalesRankingInfo } from '@scripts/servers'
-import { addUseField, generateNumList } from '@scripts/utils'
-import { STYLE_TEXT_ROW } from '@scripts/constant'
+import { addUseField } from '@scripts/utils'
 
 import { TableControl } from '@components/table'
 import salesRankColumns, { tableRowRecord } from './SalesColumns'
 import { GuestAreaMap } from '@components/graph'
 import {
   CardHeadTitle,
-  BegetReactPlaceholder,
   CoverWaitContent,
   CardItemContainer
 } from '@components/common'
+import { SkeletonSalesRank } from '@components/skeleton'
 import { useFetchStage } from '@components/hooks'
 
 const { card_tab, home_sales_table } = styles
@@ -57,40 +56,6 @@ const tabList: CardTabListType[] = [
     tab: '业务员'
   }
 ]
-
-const skeletonLength = generateNumList(5)
-const SkeletonSalesTrend = () => {
-  return (
-    <>
-      <BegetReactPlaceholder
-        type="textRow"
-        style={{
-          width: 450,
-          height: 35,
-          marginTop: 0
-        }}
-      />
-      {skeletonLength.map(num => (
-        <BegetReactPlaceholder
-          key={num}
-          type="textRow"
-          style={STYLE_TEXT_ROW}
-        />
-      ))}
-      <div className="tr">
-        <BegetReactPlaceholder
-          type="textRow"
-          style={{
-            display: 'inline-block',
-            width: 200,
-            height: 33,
-            marginTop: 13
-          }}
-        />
-      </div>
-    </>
-  )
-}
 
 export default function SalesRank() {
   const keepData = useRef({
@@ -150,7 +115,7 @@ export default function SalesRank() {
         >
           <CoverWaitContent
             loading={loading}
-            loadingPlaceholder={<SkeletonSalesTrend />}
+            loadingPlaceholder={<SkeletonSalesRank />}
           >
             <Card
               className={`${card_tab} w-100`}

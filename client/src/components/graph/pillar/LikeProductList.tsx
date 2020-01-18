@@ -5,41 +5,13 @@ import { DataSet } from '@antv/data-set'
 
 import { ICardChildProps } from '@scripts/types'
 
-import { STYLE_TEXT_ROW } from '@scripts/constant'
 import { getHotProduct } from '@scripts/servers'
 import { useFetchStage } from '@components/hooks'
-import { generateNumList } from '@scripts/utils'
 
-import {
-  CoverWaitContent,
-  BegetReactPlaceholder,
-  SkeletonCardTitle
-} from '@components/common'
+import { CoverWaitContent } from '@components/common'
+import { SkeletonLikeProductList } from '@components/skeleton'
 
 const ds = new DataSet()
-const skeletonLength = generateNumList(5)
-const SkeletonLikeProductList = () => {
-  return (
-    <>
-      <SkeletonCardTitle />
-      {skeletonLength.map(num => (
-        <BegetReactPlaceholder
-          key={num}
-          type="textRow"
-          style={STYLE_TEXT_ROW}
-        />
-      ))}
-      <BegetReactPlaceholder
-        type="textRow"
-        style={{
-          height: 18,
-          width: 190,
-          margin: '38px auto 0'
-        }}
-      />
-    </>
-  )
-}
 
 export const LikeProductList: React.FC<ICardChildProps> = ({ title }) => {
   const { loading, hideLoading } = useFetchStage()

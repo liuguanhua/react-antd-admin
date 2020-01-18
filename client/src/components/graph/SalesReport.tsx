@@ -10,8 +10,8 @@ import styles from '@styles/sass/page/home.module.scss'
 
 import { getRankingSalesReport } from '@scripts/servers'
 import { useFetchStage } from '@components/hooks'
-import { CoverWaitContent, BegetReactPlaceholder } from '@components/common'
-import { generateNumList } from '@scripts/utils'
+import { CoverWaitContent } from '@components/common'
+import { SkeletonSalesReport } from '@components/skeleton'
 
 const { sales_front_wrapper } = styles
 const scale = {
@@ -63,52 +63,6 @@ const SalesReportChart: React.FC<{
         shape="smooth"
       />
     </Chart>
-  )
-}
-
-const SkeletonSalesReport = () => {
-  return (
-    <>
-      <BegetReactPlaceholder
-        type="textRow"
-        style={{
-          height: 138,
-          margin: 'auto'
-        }}
-      />
-      <BegetReactPlaceholder
-        type="textRow"
-        style={{
-          height: 138,
-          marginTop: 2
-        }}
-      />
-      <Row
-        className={`tc ${sales_front_wrapper}`}
-        type="flex"
-        justify="space-between"
-        align="middle"
-      >
-        {generateNumList(3).map((_, key) => (
-          <Col
-            style={{
-              padding: 0
-            }}
-            className="sales-front-item"
-            key={key}
-            xs={8}
-          >
-            <BegetReactPlaceholder
-              type="textRow"
-              style={{
-                height: 136,
-                margin: 'auto'
-              }}
-            />
-          </Col>
-        ))}
-      </Row>
-    </>
   )
 }
 

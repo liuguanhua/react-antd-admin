@@ -8,78 +8,77 @@ import { ICardChildProps } from '@scripts/types'
 import styles from '@styles/sass/page/home.module.scss'
 
 import { getCommentList } from '@scripts/servers'
-import { generateNumList } from '@scripts/utils'
 
 import { LikeProductList } from '@components/graph'
 import {
   CardHeadTitle,
   CardItemContainer,
-  CoverWaitContent,
-  BegetReactPlaceholder,
-  SkeletonCardTitle
+  CoverWaitContent
 } from '@components/common'
+import { SkeletonCommentList } from '@components/skeleton'
 import { useFetchStage } from '@components/hooks'
 
 const { comment_content } = styles
 
-const skeletonLength = generateNumList(4)
-const SkeletonCommentList = () => {
-  const data = skeletonLength.map(() => {
-    return {
-      avatar: (
-        <BegetReactPlaceholder
-          type="round"
-          style={{
-            width: 50,
-            height: 50
-          }}
-        />
-      ),
-      datetime: (
-        <BegetReactPlaceholder
-          type="textRow"
-          style={{
-            width: 75,
-            height: 18,
-            marginTop: 0
-          }}
-        />
-      ),
-      content: (
-        <BegetReactPlaceholder
-          type="textRow"
-          style={{
-            height: 35
-          }}
-        />
-      )
-    }
-  })
-  return (
-    <>
-      <SkeletonCardTitle
-        style={{
-          marginBottom: 2
-        }}
-      />
-      {
-        <List
-          className={comment_content}
-          itemLayout="horizontal"
-          dataSource={data}
-          renderItem={item => {
-            const { avatar, datetime, content } = item
-            return (
-              <li>
-                <Comment {...{ avatar, datetime, content }} />
-              </li>
-            )
-          }}
-        />
-      }
-    </>
-  )
-}
+// 首页使用此骨架屏打包出来文件太大
+// const skeletonCommentListLength = generateNumList(4)
+// const SkeletonCommentList = () => {
+//   const data = skeletonCommentListLength.map(() => {
+//     return {
+//       avatar: (
+//         <BegetReactPlaceholder
+//           type="round"
+//           style={{
+//             width: 50,
+//             height: 50
+//           }}
+//         />
+//       ),
+//       datetime: (
+//         <BegetReactPlaceholder
+//           type="textRow"
+//           style={{
+//             width: 75,
+//             height: 18,
+//             marginTop: 0
+//           }}
+//         />
+//       ),
+//       content: (
+//         <BegetReactPlaceholder
+//           type="textRow"
+//           style={{
+//             height: 35
+//           }}
+//         />
+//       )
+//     }
+//   })
+//   return (
+//     <>
+//       <SkeletonCardTitle
+//         style={{
+//           marginBottom: 2
+//         }}
+//       />
+//       {
+//         <List
+//           className={comment_content}
+//           itemLayout="horizontal"
+//           dataSource={data}
+//           renderItem={item => {
+//             const { avatar, datetime, content } = item
+//             return (
+//               <li>
+//                 <Comment {...{ avatar, datetime, content }} />
+//               </li>
+//             )
+//           }}
+//         />
+//       }
+//     </>
+//   )
+// }
 
 interface ICommentLikeProductProps {}
 const CommentList: React.FC<ICardChildProps> = ({ title }) => {

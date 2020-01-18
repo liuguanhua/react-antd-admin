@@ -1,4 +1,3 @@
-import { WEB_CONFIG, RANGE_DATE, DEFAULT_CODE_THEME } from './constant'
 import Rstore from 'store'
 import qs from 'qs'
 import moment, { Moment } from 'moment'
@@ -7,7 +6,12 @@ import { isObject, isArray, isString } from 'util'
 import { TColumnType, INoticeNumProps } from '@scripts/types'
 import { EUserSex } from './types/EnumType'
 
-import { DATE_FORMAT } from '@scripts/constant'
+import {
+  WEB_CONFIG,
+  RANGE_DATE,
+  DEFAULT_CODE_THEME,
+  DATE_FORMAT
+} from '@scripts/constant'
 import routers from '@scripts/routers'
 import equalPaths from './equalPaths'
 

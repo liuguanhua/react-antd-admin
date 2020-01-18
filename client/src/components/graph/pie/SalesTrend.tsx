@@ -16,7 +16,8 @@ import { ICardChildProps } from '@scripts/types'
 import { getGoodsSalesInfo } from '@scripts/servers'
 import { numToThousands, isValidArray } from '@scripts/utils'
 
-import { BegetReactPlaceholder, CoverWaitContent } from '@components/common'
+import { CoverWaitContent } from '@components/common'
+import { SkeletonSalesTrend } from '@components/skeleton'
 import { useFetchStage } from '@components/hooks'
 
 const { DataView } = DataSet
@@ -28,28 +29,6 @@ const cols = {
   percent: {
     formatter: val => formatRatioValue(val)
   }
-}
-const SkeletonSalesTrend = () => {
-  return (
-    <>
-      <BegetReactPlaceholder
-        type="textRow"
-        style={{
-          width: 360,
-          height: 18,
-          margin: 'auto'
-        }}
-      />
-      <BegetReactPlaceholder
-        type="rect"
-        style={{
-          width: 380,
-          height: 372,
-          margin: '26px auto 0'
-        }}
-      />
-    </>
-  )
 }
 
 const SalesTrend: React.FC<ICardChildProps> = ({ title }) => {

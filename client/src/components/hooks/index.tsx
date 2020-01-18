@@ -49,7 +49,7 @@ export function useFetchStage() {
   const [error, setError] = useState(false)
   const toggleLoading = useCallback((isLoading: boolean = true) => {
     return () => {
-      // return;
+      // return
       setLoading(isLoading)
     }
   }, [])

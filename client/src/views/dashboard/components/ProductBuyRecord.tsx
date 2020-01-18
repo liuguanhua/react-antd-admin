@@ -2,10 +2,10 @@ import React, { useState, useEffect, useCallback, useRef } from 'react'
 import { Col, Icon, Menu } from 'antd'
 import { isArray } from 'util'
 
+import styles from '@styles/sass/page/home.module.scss'
+
 import { TColumnType, ICardChildProps } from '@scripts/types'
 import { EBuyRecordType, EBuyRecordColor } from '@scripts/types/EnumType'
-
-import styles from '@styles/sass/page/home.module.scss'
 
 import { begetColunmKey, numToThousands } from '@scripts/utils'
 import * as homeService from '@scripts/servers'
@@ -18,9 +18,9 @@ import {
   BegetPopover,
   CardItemContainer,
   CoverWaitContent,
-  BegetReactPlaceholder,
   BegetMenu
 } from '@components/common'
+import { SkeletonProductBuyList } from '@components/skeleton'
 import { useFetchStage } from '@components/hooks'
 
 const { product_buy_record } = styles
@@ -174,17 +174,6 @@ interface IProductBuyListProps extends ICardChildProps {
   fetchMethod?: string
 }
 
-const SkeletonProductBuyList = () => {
-  return (
-    <BegetReactPlaceholder
-      type="rect"
-      style={{
-        height: 416
-      }}
-    />
-  )
-}
-
 const ProductBuyList: React.FC<IProductBuyListProps> = ({
   columns = TransactionRecordColumns,
   moreText = '交易记录',
@@ -248,6 +237,7 @@ const ProductBuyList: React.FC<IProductBuyListProps> = ({
     >
       {title}
       <TableControl
+        className={product_buy_record}
         footer={() => {
           if (isLoading) {
             return (
@@ -285,7 +275,7 @@ const ProductBuyList: React.FC<IProductBuyListProps> = ({
 
 const ProductBuyRecord: React.FC<IProductBuyRecordProps> = () => {
   return (
-    <div className={`${product_buy_record} ant-col ant-col-sm-24`}>
+    <>
       <Col sm={24} xl={12} xxl={8}>
         <CardItemContainer>
           <ProductBuyList
@@ -320,7 +310,7 @@ const ProductBuyRecord: React.FC<IProductBuyRecordProps> = () => {
           />
         </CardItemContainer>
       </Col>
-    </div>
+    </>
   )
 }
 

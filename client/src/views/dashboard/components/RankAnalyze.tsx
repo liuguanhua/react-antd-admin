@@ -8,16 +8,14 @@ import { DataSet } from '@antv/data-set'
 import styles from '@styles/sass/page/home.module.scss'
 
 import { getPerformanceInfo } from '@scripts/servers'
-import { generateNumList } from '@scripts/utils'
-import { STYLE_TEXT_ROW } from '@scripts/constant'
 
 import { SalesTrend } from '@components/graph'
 import {
   CardItemContainer,
-  BegetReactPlaceholder,
   CoverWaitContent,
   CardHeadTitle
 } from '@components/common'
+import { SkeletonRankAnalyze } from '@components/skeleton'
 import { useFetchStage } from '@components/hooks'
 
 const { stats_head } = styles
@@ -30,48 +28,6 @@ const cols = {
   city: {
     formatter: val => (val === 'amount' ? '订单金额' : '订单利润')
   }
-}
-
-const skeletonLength = generateNumList(6)
-const SkeletonRankAnalyze = () => {
-  return (
-    <>
-      <BegetReactPlaceholder
-        type="textRow"
-        style={{
-          height: 18,
-          width: 160,
-          margin: 'auto'
-        }}
-      />
-      {skeletonLength.map(num => (
-        <BegetReactPlaceholder
-          key={num}
-          type="textRow"
-          style={STYLE_TEXT_ROW}
-        />
-      ))}
-      <div
-        style={{
-          height: 2
-        }}
-      />
-    </>
-  )
-  /* return (
-    <BegetContentLoader height={159}>
-      <rect x="165" y="10" height="10" width="70"></rect>
-      {skeletonLength.map(num => (
-        <rect
-          key={num}
-          x="8.5"
-          y={30 + num * 26}
-          height="18"
-          width="383"
-        ></rect>
-      ))}
-    </BegetContentLoader>
-  ); */
 }
 
 export default function RankAnalyze() {
