@@ -17,7 +17,10 @@ const saveUserInfo = function(data) {
   //   userList.shift()
   // }
   // userList = [...userList, data]
-  this.cookie(USER_COOKIE, data, { signed: true /*  sameSite: 'lax' */ })
+  this.cookie(USER_COOKIE, data, {
+    signed: true,
+    sameSite: 'lax'
+  })
 }
 
 router.get('/verifyIsLogin', function(req, res) {

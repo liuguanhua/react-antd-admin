@@ -10,7 +10,7 @@ const TEMP_USER_LENGTH = 250
 const CURRENT_YEAR = +moment().format('YYYY')
 const CURRENT_MONTH = +moment().format('M')
 const PASSWORD = '888888'
-const REQUEST_TIMEOUT = 10000
+const REQUEST_TIMEOUT = 20000
 
 const GOOD_LIST = [
   '巧克力',
