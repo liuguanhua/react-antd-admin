@@ -28,7 +28,7 @@
 
 <!-- [预览地址一](https://liuguanhua.github.io/react-antd-admin/)（推荐） -->
 
-[预览](https://react-antd-admin.lhh.now.sh/)
+[在线预览](https://react-antd-admin.lhh.now.sh/)
 
 ![demo](https://s2.ax1x.com/2020/01/14/lL9rJU.png)
 
