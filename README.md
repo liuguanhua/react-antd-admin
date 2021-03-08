@@ -14,7 +14,7 @@
     <img alt="Antd Version" src="https://img.shields.io/badge/antd-3.25.1-brightgreen" />
   </a>
   <a href="https://github.com/liuguanhua/react-antd-admin/releases" target="_blank">
-     <img alt="React-Antd-Admin Version" src="https://img.shields.io/badge/releases-1.0.0-blue.svg?cacheSeconds=2592000" />
+     <img alt="React-Antd-Admin Version" src="https://img.shields.io/badge/releases-1.0.1-blue.svg?cacheSeconds=2592000" />
   </a>
 </p>
 
@@ -22,19 +22,19 @@
 
 基于工作中开发需要，设计了一个后台前端管理系统，节省从零开始搭建的时间，前端基于[react](https://github.com/facebook/react)（拥抱 hooks）、[typescript](https://github.com/microsoft/TypeScript)、[antd](https://github.com/ant-design/ant-design)、[dva](https://github.com/dvajs/dva)及一些特别优秀的开源库实现，特别感谢。
 
-使用[node](https://nodejs.org/zh-cn)、[mockjs](https://github.com/nuysoft/Mock)模拟了一层数据服务，部署在[now.sh](https://zeit.co)平台上。
+使用[node](https://nodejs.org/zh-cn)、[mockjs](https://github.com/nuysoft/Mock)模拟了一层数据服务，[pm2](https://pm2.keymetrics.io/)、[nginx](https://www.nginx.com/)部署。
 
 ## 🏠 主页
 
 <!-- [预览地址一](https://liuguanhua.github.io/react-antd-admin/)（推荐） -->
 
-[在线预览](https://react-antd-admin.lhh.now.sh/)
+[在线预览](http://react-admin.lgh930.com/)
 
 ![demo](https://s2.ax1x.com/2020/01/14/lL9rJU.png)
 
 ![demo](https://s2.ax1x.com/2020/01/16/lvekAU.gif)
 
-![二维码](https://s2.ax1x.com/2020/01/14/lLSd6s.png)
+[![61PiT0.png](https://s3.ax1x.com/2021/03/08/61PiT0.png)](https://imgtu.com/i/61PiT0)
 
 ## 📁 目录
 
@@ -120,7 +120,7 @@ server端
 
 ## 👤 作者
 
-- 个人主页: [liuguanhua.github.io](https://liuguanhua.github.io)
+- 个人主页: [lgh930.com](http://lgh930.com)
 - Github:[@liuguanhua](https://github.com/liguanhua)
 
 ## 🤝 支持
