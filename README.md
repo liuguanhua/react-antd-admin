@@ -14,7 +14,7 @@
     <img alt="Antd Version" src="https://img.shields.io/badge/antd-3.25.1-brightgreen" />
   </a>
   <a href="https://github.com/liuguanhua/react-antd-admin/releases" target="_blank">
-     <img alt="React-Antd-Admin Version" src="https://img.shields.io/badge/releases-1.0.1-blue.svg?cacheSeconds=2592000" />
+     <img alt="React-Antd-Admin Version" src="https://img.shields.io/badge/releases-1.0.0-blue.svg?cacheSeconds=2592000" />
   </a>
 </p>
 
@@ -120,7 +120,7 @@ server端
 
 ## 👤 作者
 
-- 个人主页: [lgh930.com](http://lgh930.com)
+- 个人主页: [http://lgh930.com](http://lgh930.com)
 - Github:[@liuguanhua](https://github.com/liguanhua)
 
 ## 🤝 支持
