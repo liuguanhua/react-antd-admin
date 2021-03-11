@@ -79,8 +79,7 @@ const request = (opt: IRequestType) => {
         const { data: info } = response
         const serveInfo = info || {}
         const { code, msg, result = {}, success: resSuccess } = serveInfo
-        // if (Object.is(code, 200) && resSuccess) {
-        if (resSuccess) {
+        if (Object.is(code, 200) && resSuccess) {
           success && success(result)
           return resolve(result)
         }

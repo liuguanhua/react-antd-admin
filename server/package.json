@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "nodemon --inspect ./bin/www",
     "start": "nodemon  ./bin/www",
-    "node-start": "node ./bin/www"
+    "node-start": "node ./bin/www",
+    "prod": "pm2 start npm --name 'react-admin-api' -- run node-start"
   },
   "dependencies": {
     "connect-redis": "^4.0.3",
