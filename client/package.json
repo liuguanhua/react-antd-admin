@@ -92,12 +92,19 @@
   "devDependencies": {
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
     "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
     "copy-webpack-plugin": "^5.0.5",
     "cross-env": "^6.0.3",
     "customize-cra": "^0.9.1",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.23.1",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
     "webpack-cli": "^3.3.10"
   }
 }
