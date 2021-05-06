@@ -6088,10 +6088,10 @@ highcharts-react-official@^2.2.2:
   resolved "https://registry.npm.taobao.org/highcharts-react-official/download/highcharts-react-official-2.2.2.tgz#1a83558f4501b73c99e79aa65325f7bd522d6574"
   integrity sha1-GoNVj0UBtzyZ55qmUyX3vVItZXQ=
 
-highcharts@^7.2.1:
-  version "7.2.1"
-  resolved "https://registry.npm.taobao.org/highcharts/download/highcharts-7.2.1.tgz#313c434bbfd4525a72b76c6bfbd9c39dfe2d1993"
-  integrity sha1-MTxDS7/UUlpyt2xr+9nDnf4tGZM=
+highcharts@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-9.0.0.tgz#2e5d382481f71c50ac7f086e7bdead394fab71d4"
+  integrity sha512-MJCtidFytGSQvsV3OEM+vFTLpjUcp7jmFpLn8h3oL4WKp0gxUOQg6Nw00sqMWGdiadst0gOZO4804zynTcYjZQ==
 
 highlight-words-core@^1.2.0:
   version "1.2.2"
