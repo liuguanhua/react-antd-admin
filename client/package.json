@@ -28,7 +28,7 @@
     "highcharts": "^7.2.1",
     "highcharts-react-official": "^2.2.2",
     "mockjs": "^1.1.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "nprogress": "^0.2.0",
     "qs": "^6.9.1",
     "react": "16.8.6",
