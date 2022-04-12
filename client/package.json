@@ -57,7 +57,7 @@
     "store": "^2.0.12",
     "throttle-debounce": "^2.1.0",
     "typescript": "3.7.2",
-    "vditor": "^1.9.7",
+    "vditor": "^3.8.13",
     "video-react": "^0.14.1",
     "webpack-bundle-analyzer": "^3.6.0"
   },
